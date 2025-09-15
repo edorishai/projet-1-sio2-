@@ -1,0 +1,30 @@
+.portfolio-header {
+    background-color: #102542;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.portfolio-header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.portfolio-header nav ul li {
+    margin: 0 30px;
+}
+.portfolio-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 0;
+    display: inline-block;
+    transition: color 0.2s;
+}
+.portfolio-header nav ul li a:hover {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
