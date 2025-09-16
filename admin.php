@@ -10,7 +10,8 @@ if (!isset($_SESSION['is_admin']) || $_SESSION['is_admin'] !== true) {
     exit;
 }
 
-// Actions : supprimer, augmenter/diminuer quantité, changer statut
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['delete'])) {
         $livre_id = $_POST['livre_id'];

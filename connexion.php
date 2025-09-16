@@ -2,7 +2,7 @@
 $host = 'localhost';
 $dbname = 'bibliotheque';
 $user = 'root';
-$pass = '';
+$pass = 'sio2024';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
