@@ -12,5 +12,6 @@
         <a href="page_connexion.php"><button class="btn btn-primary">Connexion</button></a>
         <a href="inscription.php"><button class="btn btn-success">S'inscrire</button></a>
     </div>
+    
 </body>
 </html>

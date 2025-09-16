@@ -4,6 +4,7 @@ session_start();
 $pdo = new PDO('mysql:host=localhost;dbname=bibliotheque;charset=utf8', 'root', '');
 $message = '';
 
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
 

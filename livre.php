@@ -2,12 +2,13 @@
 
 $pdo = new PDO('mysql:host=localhost;dbname=bibliotheque;charset=utf8', 'root', '');
 
-// Récupération des filtres
+
+
 $genre = $_GET['genre'] ?? '';
 $auteur = $_GET['auteur'] ?? '';
 $date = $_GET['date'] ?? '';
 
-// Construction de la requête
+
 $sql = "SELECT * FROM livres WHERE 1";
 $params = [];
 
@@ -70,12 +71,12 @@ $auteurs = $pdo->query("SELECT DISTINCT auteur FROM livres")->fetchAll(PDO::FETC
                     $quantite = $stmtQ->fetchColumn();
                     if ($quantite === false) $quantite = 0;
 
-                    // Détermine le statut
+                    
                     $statut = ($quantite > 0) ? 'Libre' : 'Réservé';
                     $disabled = ($quantite == 0) ? 'disabled' : '';
                 ?>
                 <div class="livre-card">
-                    <!-- Ajoute l'image ici si tu veux : <img src=<?= htmlspecialchars($livre['image']) ?>" alt="Couverture" class="livre-img"> -->
+                    <?= htmlspecialchars($livre['image']) ?>" alt="Couverture" class="livre-img"> -->
                     <h2><?= htmlspecialchars($livre['titre']) ?></h2>
                     <p><strong>Auteur :</strong> <?= htmlspecialchars($livre['auteur']) ?></p>
                     <p><strong>Date de publication :</strong> <?= htmlspecialchars($livre['date_publication']) ?></p>
